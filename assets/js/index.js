@@ -10,18 +10,18 @@
 Метод написання нового повідомлення. Має приймати повідомлення т повертати рядок (Користувач такий-то написав текстПовідомлення). Також має збільшувати кількість повідомлень.*/
 
 
-function User(name, surname, isFemale, messages) {
-    this.name = name,
-    this.surname = surname,
-    this.isFemale = isFemale,
-    this.messages = messages,
+function User (name, surname, isMale, messages) {
+    this.name = name;
+    this.surname = surname;
+    this.isMale = isMale;
+    this.messages = messages;
     this.getUserDetails = () => {
-      return 'User: ' + 'name: ' + this.name + ' surname: ' + this.surname +  ' isFemale: ' + this.isFemale + '  wrote messages: ' + this.messages;
+      return `User name:  ${this.name} ${this.surname} gender: ' ${this.isMale? 'male': 'female'} wrote messages: ${this.messages}`;
       },
     this.newMessages = (text) => {
       this.messages++;
-      return 'User: ' + this.name + ' wrote ' + text
-    }
+      return `User: ${this.name} wrote ${text}`;
+    } 
 };
 
 let user1 = new User('Anna', 'Саt', true, 12);
